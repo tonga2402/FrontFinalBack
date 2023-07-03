@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Listado de Paciente</title>
+    <title>Listado de Turnos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="turnoListStyles.css">
     <script src="https://kit.fontawesome.com/aa78b6c036.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/static.js/get_paciente.js"></script>
-    <script type="text/javascript" src="/static.js/update_paciente.js"></script>
-    <script type="text/javascript" src="/static.js/delete_paciente.js"></script>
+    <script type="text/javascript" src="/static.js/get_turno.js"></script>
+    <script type="text/javascript" src="/static.js/update_turno.js"></script>
+    <script type="text/javascript" src="/static.js/delete_turno.js"></script>
 </head>
 <body>
 <div class="container">
     <ul class="nav nav-pills">
         <li class="nav-item" id="btn1" >
-            <a class="nav-link" href="/"><i id="icon1" class="fa-solid fa-user-plus"></i>&nbspAgregar Paciente</a>
+            <a class="nav-link" href="/"><i id="icon1" class="fa-solid fa-calendar-check"></i>&nbspAgregar Turno</a>
         </li>
     </ul>
     <div class="container">
         <ul class="nav nav-pills">
             <li class="nav-item" id="btn2">
-                <a class="nav-link" href="/pacienteList.html">Todos</a>
+                <a class="nav-link" href="/turnoList.html">Todos</a>
             </li>
         </ul>
 
-        <div id="div_paciente_table">
-            <h1>Pacientes</h1>
+        <div id="div_turno_table">
+            <h1>Turnos</h1>
             <div class="row col-md-7 table-responsive">
-                <table id="pacienteTable" class="table table-striped">
+                <table id="turnoTable" class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
+                        <th>ID</th>
+                        <th>Odontologo</th>
+                        <th>Paciente</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
 
                     </tr>
                     </thead>
-                    <tbody id="pacienteTableBody">
+                    <tbody id="turnoTableBody">
 
                     </tbody>
                 </table>
@@ -44,23 +46,27 @@
         </div>
         <div class="row">
             <div class="col-sm-7"
-                 id="div_paciente_updating">
-                <form id="update_paciente_form">
+                 id="div_turno_updating">
+                <form id="update_turno_form">
                     <div class="form-group">
 
-                        <input type="text" class="form-control" id="paciente_id" readonly>
+                        <input type="text" class="form-control" id="turno_id" readonly>
                     </div>
                     <div class="form-group">
 
-                        <input type="text" class="form-control" placeholder="nombre" id="nombre">
+                        <input type="number" class="form-control" placeholder="odontologo_id" id="odontologo_id">
                     </div>
                     <div class="form-group">
 
-                        <input type="text" class="form-control" placeholder="apellido" id="apellido">
+                        <input type="number" class="form-control" placeholder="paciente_id" id="paciente_id">
                     </div>
                     <div class="form-group">
 
-                        <input type="text" class="form-control" placeholder="dni" id="dni">
+                        <input type="text" class="form-control" placeholder="fecha" id="fecha">
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" placeholder="hora" id="hora">
                     </div>
 
 
